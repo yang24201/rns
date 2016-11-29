@@ -2,12 +2,23 @@ import React, {Component} from 'react'
 import {
   StyleSheet,
   View,
-  TextInput
+  TextInput,
+  Dimensions
 } from 'react-native'
+import {Actions} from 'react-native-router-flux'
+
+const PAGE_WIDTH=Dimensions.get('window').width
+const PAGE_HEIGHT=Dimensions.get('window').height
 
 export default class Launch extends Component {
   constructor(props) {
     super(props)
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      Actions.LOGIN()
+    }, 3000)
   }
 
   render() {
@@ -23,6 +34,7 @@ export default class Launch extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    width: PAGE_WIDTH
   },
 })
