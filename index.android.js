@@ -2,6 +2,6 @@ import React, { Component } from 'react';
 import {
   AppRegistry
 } from 'react-native';
-import Rns from './RnsMain.js'
+import Rns from './RnsMain'
 
 AppRegistry.registerComponent('Rns', () => Rns);

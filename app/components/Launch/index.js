@@ -12,11 +12,17 @@ export default class Launch extends Component {
 
   render() {
     return (
-      <View>
-        <TextInput
+      <View style={styles.container}>
+        <TextInput style={{flex:1, alignItems: 'center', justifyContent: 'center'}}
           value="Welcome"
         />
       </View>
     )
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1
+  },
+})
