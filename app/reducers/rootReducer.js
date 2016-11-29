@@ -1,7 +1,9 @@
 import {combineReducers} from 'redux'
 
-const rootReducers = combineReducers({
+import configReducer from './configReducer'
 
+const rootReducers = combineReducers({
+  CONFIG: configReducer,
 })
 
 const rootReducersWrapper = (state, action) => {
