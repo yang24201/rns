@@ -17,8 +17,8 @@ export default function userReducer(state = initialState, action) {
 function handleLogin(state, action) {
   console.log("action", action.payload)
   let payload = action.payload
-  state.set('userName', payload.userName)
-  state.set('password', payload.password)
+  state = state.set("userName", payload.userName)
+  state = state.set("password", payload.password)
   return state
 }
 
