@@ -11,8 +11,9 @@ export function userLogin(payload) {
     dispatch(loginAction({userName, password}))
 
     // 查询用户信息
-    if (userName === 'yang' && password === '123456') {
-      dispatch(createAction(types.USER_LOGIN_SUCCESS))
+    if (userName == 'yang' && password == '123456') {
+      // let successAction = createAction(types.USER_LOGIN_SUCCESS)
+      dispatch(createAction(types.USER_LOGIN_SUCCESS)())
     }
   }
 }
