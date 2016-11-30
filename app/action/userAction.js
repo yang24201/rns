@@ -4,9 +4,11 @@ import Symbol from "es6-symbol"
 
 export function userLogin(payload) {
   return (dispatch, getState) => {
+    console.log("payload:", payload)
     let userName = payload.userName
     let password = payload.password
-    dispatch(createAction(types.USER_LOGIN_ACTION))
+    let loginAction = createAction(types.USER_LOGIN_ACTION)
+    dispatch(loginAction({userName, password}))
 
     // 查询用户信息
     if (userName === 'yang' && password === '123456') {
